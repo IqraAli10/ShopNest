@@ -26,6 +26,8 @@ const CheckoutPage = () => {
       toast({
         title: "Order Placed Successfully!",
         description: "Thank you for your purchase.",
+        className: "bg-[#000000] text-white"
+
       });
       
       clearCart();
@@ -35,6 +37,8 @@ const CheckoutPage = () => {
         title: "Error",
         description: "Something went wrong. Please try again.",
         variant: "destructive",
+        className: "bg-[#000000] text-white"
+
       });
     } finally {
       setLoading(false);
@@ -117,7 +121,7 @@ const CheckoutPage = () => {
                 </div>
               </div>
 
-              <Button type="submit" className="w-full" disabled={loading}>
+              <Button type="submit" className="w-full bg-black text-white" disabled={loading}>
                 {loading ? 'Processing...' : 'Place Order'}
               </Button>
             </form>

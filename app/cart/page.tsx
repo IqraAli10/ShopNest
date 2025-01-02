@@ -29,7 +29,7 @@ const CartPage = () => {
           <div className="text-center py-12">
             <p className="text-lg text-muted-foreground mb-4">Your cart is empty</p>
             <Link href="/shop">
-              <Button>Continue Shopping</Button>
+              <Button className='bg-black text-white'>Continue Shopping</Button>
             </Link>
           </div>
         ) : (
@@ -55,6 +55,7 @@ const CartPage = () => {
                           size="icon"
                           onClick={() => updateQuantity(item.id, item.quantity - 1)}
                           disabled={item.quantity <= 1}
+                          className='bg-black text-white'
                         >
                           <Minus className="h-4 w-4" />
                         </Button>
@@ -62,15 +63,17 @@ const CartPage = () => {
                           type="number"
                           value={item.quantity}
                           onChange={(e) => updateQuantity(item.id, parseInt(e.target.value))}
-                          className="w-20 text-center"
+                          className="w-20 text-center "
                           min="1"
+                          
                         />
                         <Button
                           variant="outline"
                           size="icon"
                           onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                          className='bg-black text-white'
                         >
-                          <Plus className="h-4 w-4" />
+                          <Plus className="h-4 w-4 " />
                         </Button>
                         <Button
                           variant="destructive"
@@ -109,7 +112,7 @@ const CartPage = () => {
                   </div>
                 </div>
                 <Link href="/checkout">
-                  <Button className="w-full mt-6">Proceed to Checkout</Button>
+                  <Button className="w-full mt-6 bg-black text-white">Proceed to Checkout</Button>
                 </Link>
               </Card>
             </div>

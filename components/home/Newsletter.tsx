@@ -52,7 +52,7 @@ const Newsletter = () => {
             required
             className="flex-1"
           />
-          <Button type="submit" disabled={loading}>
+          <Button type="submit" disabled={loading} className='bg-black text-white'>
             {loading ? 'Subscribing...' : 'Subscribe'}
           </Button>
         </form>
