@@ -30,16 +30,16 @@ export default function WishlistCard() {
   };
 
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col h-full bg ">
       <h2 className="font-heading text-2xl font-semibold mb-4">My Wishlist</h2>
       {items.length === 0 ? (
         <div className="flex-1 flex items-center justify-center">
           <p className="text-muted-foreground">Your wishlist is empty</p>
         </div>
       ) : (
-        <div className="flex-1 space-y-4">
+        <div className="flex-1 space-y-4 ">
           {items.map((item) => (
-            <div key={item.id} className="flex gap-4 p-2 border rounded-lg">
+            <div key={item.id} className="flex gap-4 p-2 rounded-lg">
               <div className="relative w-20 h-20">
                 <Image
                   src={item.image}

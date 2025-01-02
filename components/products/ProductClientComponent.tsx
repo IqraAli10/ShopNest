@@ -29,6 +29,8 @@ const ProductClientComponent: React.FC<ProductClientProps> = ({ product, related
     toast({
       title: "Added to Cart",
       description: `${product.name} has been added to your cart.`,
+      className:"bg-[#000000] text-white"
+
     });
   };
 
